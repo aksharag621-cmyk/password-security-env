@@ -1,3 +1,12 @@
+---
+title: Password Security Env
+emoji: 🔐
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 # Password Security Environment
 
 A real-world OpenEnv environment where AI agents learn to evaluate and improve password security.
