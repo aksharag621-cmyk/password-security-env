@@ -33,3 +33,11 @@ def step(req: dict):
 @app.get("/state")
 def get_state():
     return {"episode_id": state.get("episode_id",""), "step_count": state.get("step_count",0), "current_task": state.get("task",""), "max_attempts": 3}
+
+
+def main():
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=7860)
+
+if __name__ == "__main__":
+    main()
