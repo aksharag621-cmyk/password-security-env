@@ -1,0 +1,5 @@
+
+from openenv.core.env_server import create_fastapi_app
+from password_security_env_environment import PasswordSecurityEnvironment
+
+app = create_fastapi_app(PasswordSecurityEnvironment)
