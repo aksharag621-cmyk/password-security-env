@@ -3,5 +3,5 @@ name: password_security_env
 type: space
 runtime: fastapi
 app: server.app:app
-port: 8000
+port: 7860
 
