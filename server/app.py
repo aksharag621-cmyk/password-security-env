@@ -82,3 +82,12 @@ def run_inference():
             print(f"[STEP] step={step} action={pwd} reward={ev['score']:.2f} done=False info=ok", flush=True)
         print(f"[END] task={task['id']} score=0.85 steps=3", flush=True)
 
+@app.post("/step")
+def step(action: dict):
+    return {
+        "observation": {
+            "message": "step executed"
+        },
+        "reward": 0,
+        "done": False
+        }
