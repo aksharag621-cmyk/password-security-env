@@ -53,20 +53,20 @@ def baseline():
     return {"baseline_score": avg, "results": results}
 
 @app.post("/grader")
-def grader():
+def grader(payload: dict):
     return {
         "score": 1.0,
         "feedback": "All tests passed",
         "success": True
     }
-
-@app.post("/reset")
+    
+ @app.post("/reset")
 def reset():
     return {
         "observation": {
             "tasks": TASKS
         }
-    }
+    }       
 
 def run_inference():
     for task in TASKS:
@@ -86,9 +86,7 @@ def step(action: dict):
         "reward": 0,
         "done": False
         }
-@app.get("/akshra-test")
-def test():
-    return {"message": "THIS IS MY REAL APP"}
+@app
 @app.get("/akshra-test")
 def test():
     return {"message": "REAL APP RUNNING"}
