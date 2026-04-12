@@ -94,3 +94,6 @@ def step(action: dict):
 @app.get("/akshra-test")
 def test():
     return {"message": "THIS IS MY REAL APP"}
+@app.get("/akshra-test")
+def test():
+    return {"message": "REAL APP RUNNING"}
