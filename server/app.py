@@ -68,7 +68,7 @@ def grader(payload: dict):
 def reset():
     return {
     "observation": {
-        "message": "Environment reset successfully"
+        "tasks": TASKS
     }
     }
     
