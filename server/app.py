@@ -66,7 +66,12 @@ def grader(payload: dict):
 
 @app.post("/reset")
 def reset():
-    return {"status": "reset", "message": "Environment reset successfully"}
+    return {
+    "observation": {
+        "message": "Environment reset successfully"
+    }
+    }
+    
 
 def run_inference():
     for task in TASKS:
@@ -77,7 +82,3 @@ def run_inference():
             print(f"[STEP] step={step} action={pwd} reward={ev['score']:.2f} done=False info=ok", flush=True)
         print(f"[END] task={task['id']} score=0.85 steps=3", flush=True)
 
-if __name__ == "__main__":
-    run_inference()
-    port = int(os.environ.get("PORT", 7860))
-    uvicorn.run(app, host="0.0.0.0", port=port)
