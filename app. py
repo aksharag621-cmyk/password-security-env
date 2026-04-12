@@ -20,4 +20,4 @@ def grader(payload: dict):
 
 @app.get("/baseline")
 def baseline():
-    return {"baseline_score": 1.0}
+    return {"baseline_score": 1.0} 
