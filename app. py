@@ -33,3 +33,18 @@ def step(action: dict):
 @app.post("/grader")
 def grader():
     return {"score": 1.0}
+@app.post("/reset")
+def reset():
+    return {
+        "observation": {
+            "tasks": TASKS
+        }
+    }
+
+@app.post("/step")
+def step(action: dict):
+    return {
+        "observation": {"message": "step executed"},
+        "reward": 0,
+        "done": False
+    }
